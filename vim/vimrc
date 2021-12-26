@@ -1,0 +1,125 @@
+" -------------------------------------------------------------------
+" Options
+" -------------------------------------------------------------------
+set nocompatible            " disable compatibility to old-time vi
+set hidden
+set showmatch               " show matching
+set ignorecase              " case insensitive
+set mouse=v                 " middle-click paste with
+set hlsearch                " highlight search
+set incsearch               " incremental search
+set tabstop=4               " number of columns occupied by a tab
+set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
+set expandtab               " converts tabs to white space
+set shiftwidth=4            " width for autoindents
+set autoindent              " indent a new line the same amount as the line just typed
+set number                  " add line numbers
+set wildmode=longest,list   " get bash-like tab completions
+set cc=80                   " set an 80 column border for good coding style
+filetype plugin indent on   " allow auto-indenting depending on file type
+syntax on                   " syntax highlighting
+set mouse=a                 " enable mouse click
+set clipboard=unnamed   " using system clipboard
+filetype plugin on
+set cursorline              " highlight current cursorline
+set ttyfast                 " Speed up scrolling in Vim
+" set spell                 " enable spell check (may need to download language package)
+" set noswapfile            " disable creating swap file
+" set backupdir=~/.cache/vim " Directory to store backup files.
+set relativenumber
+
+colorscheme gruvbox
+set bg=dark
+let g:airline_theme='gruvbox'
+set splitright
+set splitbelow
+
+
+let &t_SI = "\e[5 q"
+let &t_EI = "\e[0 q"
+
+" -------------------------------------------------------------------
+" Plugins
+" -------------------------------------------------------------------
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
+call plug#begin("~/.vim/plugged")
+ source ~/.vim/plugins/nerdcommenter.vim
+ source ~/.vim/plugins/vim-startify.vim
+ source ~/.vim/plugins/vim-fugitive.vim
+ source ~/.vim/plugins/nerdtree.vim
+ source ~/.vim/plugins/vim-airline.vim
+ source ~/.vim/plugins/floaterm.vim
+ source ~/.vim/plugins/fzf.vim
+ source ~/.vim/plugins/coc.vim
+ source ~/.vim/plugins/vim-devicons
+ Plug 'sheerun/vim-polyglot'
+call plug#end()
+
+" -------------------------------------------------------------------
+" Mappings
+" -------------------------------------------------------------------
+let mapleader = ' '
+
+nnoremap <Leader>cp :call popup_close(win_getid())<CR>
+
+map <Leader>y "+y
+map <Leader>p "+p
+map <Leader>P "+P
+
+noremap <Leader>qq :q!<CR>
+
+noremap <Leader>gf :e <cfile><CR>
+
+map <Leader>nt :NERDTreeToggle<CR>
+map <Leader>nf :NERDTreeFocus<CR>
+map <Leader>' :CocCommand document.toggleInlayHint<Cr>
+
+noremap <Leader>ff :GFiles<CR>
+noremap <Leader>fa :Files<CR>
+noremap <Leader>fw :Windows<CR>
+noremap <Leader>fb :Buffers<CR>
+noremap <Leader>fr :Rg<CR>
+
+noremap <Leader>en :call CocAction('diagnosticNext')<CR>
+noremap <Leader>ep :call CocAction('diagnosticPrevious')<CR>
+
+
+map <Leader>j :tabr<CR>
+map <Leader>k :tabl<CR>
+map <Leader>h :tabp<CR>
+map <Leader>l :tabn<CR>
+
+" Navigate windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" map <C-w>v :vnew<CR>
+" map <C-w>s :new<CR>
+
+let g:floaterm_keymap_new    = '<Leader>tw'
+let g:floaterm_keymap_prev   = '<Leader>tp'
+let g:floaterm_keymap_next   = '<Leader>tn'
+let g:floaterm_keymap_toggle = '<Leader>tt'
+
+if filereadable(expand("~/.vim/local.vim"))
+    source ~/.vim/local.vim
+endif
+
+if filereadable("./.vimrc.local")
+    source ./.vimrc.local
+endif
+
+set t_RV=
+
+map <Leader>nh :nohl<CR>
+
+
+

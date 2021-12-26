@@ -1,0 +1,31 @@
+---
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [./preinstall.sh, Running preinstallation script ]
+
+- create:
+  - ~/.vim/plugged
+  - ~/.config/kitty/kitty-themes/themes
+  - ~/.oh-my-zsh/themes
+  - ~/bin
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.themes: themes
+    ~/.config/terminator/config: terminator.conf
+    ~/.vimrc: vim/vimrc
+    ~/.vim/plugins: vim/plugins
+    ~/.vim/colors/gruvbox.vim: vim/plugins/gruvbox.vim
+    ~/.vim/autoload/airline: vim/plugins/autoload/airline
+    ~/.fonts: fonts
+    ~/.zshrc: zsh/zshrc
+    ~/bin/waitforit: bin/waitforit
+
+
