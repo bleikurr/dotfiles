@@ -27,5 +27,6 @@
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
     ~/.oh-my-zsh/plugins/zsh-kitty: zsh/plugins/zsh-kitty
     ~/bin/waitforit: bin/waitforit
+    ~/bin/switchwindow: bin/switchwindow
 
 

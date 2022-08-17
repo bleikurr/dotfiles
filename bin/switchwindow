@@ -1,0 +1,14 @@
+#!/bin/bash
+FILE=~/.switchwindowlast
+
+CURRENT=$(xdotool getactivewindow getwindowname)
+
+if [ "$1" == "last" ]; then
+    if [ -f $FILE ]; then
+        wmctrl -a $(<$FILE)
+        echo $CURRENT > $FILE
+    fi
+else
+    wmctrl -a $1
+    echo $CURRENT > $FILE
+fi
