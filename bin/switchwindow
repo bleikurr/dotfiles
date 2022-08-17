@@ -9,6 +9,7 @@ if [ "$1" == "last" ]; then
         echo $CURRENT > $FILE
     fi
 else
+    echo $CURRENT | grep -i "$1" && exit 0
     wmctrl -a $1
     echo $CURRENT > $FILE
 fi
