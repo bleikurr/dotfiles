@@ -1,11 +1,6 @@
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 
-
-
-hi FgCocErrorFloatBgCocFloating ctermfg=Black ctermbg=Magenta
-hi CocErrorHighlight ctermfg=Red
-
 inoremap <silent><expr> <TAB>
 	  \ pumvisible() ? coc#_select_confirm() :
 	  \ coc#expandableOrJumpable() ?
