@@ -22,6 +22,8 @@
     ~/.config/terminator/config: terminator.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/plugins: vim/plugins
+    ~/.vim/colors/gruvbox.vim: vim/plugins/gruvbox.vim
+    ~/.vim/autoload/airline: vim/plugins/autoload/airline
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme

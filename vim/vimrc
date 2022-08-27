@@ -27,7 +27,8 @@ set ttyfast                 " Speed up scrolling in Vim
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
-colorscheme slate
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
 set splitright
 set splitbelow
 
