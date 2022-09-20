@@ -28,6 +28,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 colorscheme gruvbox
+set bg=dark
 let g:airline_theme='gruvbox'
 set splitright
 set splitbelow
@@ -70,7 +71,7 @@ noremap <Leader>gf :e <cfile><CR>
 map <Leader>nt :NERDTreeToggle<CR>
 map <Leader>nf :NERDTreeFocus<CR>
 
-noremap <Leader>ff :Files<CR>
+noremap <Leader>ff :GFiles<CR>
 noremap <Leader>fw :Windows<CR>
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fr :Rg<CR>
@@ -79,6 +80,12 @@ map <Leader>j :tabr<CR>
 map <Leader>k :tabl<CR>
 map <Leader>h :tabp<CR>
 map <Leader>l :tabn<CR>
+
+" Navigate windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 map <C-w>v :vnew<CR>
 map <C-w>s :new<CR>
