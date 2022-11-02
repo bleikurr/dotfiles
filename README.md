@@ -2,7 +2,7 @@
 
 Heima er best.
 
-## Init
+## Init -- workstation
 
 * Install packages [zsh, vim, nodejs]
 * Run `./install`

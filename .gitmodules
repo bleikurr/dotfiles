@@ -6,6 +6,4 @@
 [submodule "zsh/zshtheme"]
 	path = zsh/zshtheme
 	url = https://github.com/dracula/zsh.git
-[submodule "zsh/plugins/zsh-kitty"]
-	path = zsh/plugins/zsh-kitty
-	url = https://github.com/redxtech/zsh-kitty.git
+

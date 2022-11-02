@@ -12,23 +12,15 @@
 
 - create:
   - ~/.vim/plugged
-  - ~/.config/kitty/kitty-themes/themes
   - ~/.oh-my-zsh/themes
-  - ~/bin
 
 - link:
     ~/.bashrc: bashrc
-    ~/.themes: themes
-    ~/.config/terminator/config: terminator.conf
     ~/.vimrc: vim/vimrc
     ~/.vim/plugins: vim/plugins
     ~/.vim/colors/gruvbox.vim: vim/plugins/gruvbox.vim
     ~/.vim/autoload/airline: vim/plugins/autoload/airline
-    ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/themes/dracula.zsh-theme: zsh/zshtheme/dracula.zsh-theme
-    ~/.oh-my-zsh/plugins/zsh-kitty: zsh/plugins/zsh-kitty
-    ~/bin/waitforit: bin/waitforit
-    ~/bin/switchwindow: bin/switchwindow
 
 
