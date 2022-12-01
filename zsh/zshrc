@@ -107,6 +107,7 @@ export ZSH_THEME_TERM_TITLE_IDLE="%~"
 export EDITOR='/usr/bin/vim'
 export VISUAL='/usr/bin/vim'
 export GOPATH=$HOME/Go
+LS_COLORS+=':ow=01;33'
 
 # ----------------------------------------------------------
 # Text styling
