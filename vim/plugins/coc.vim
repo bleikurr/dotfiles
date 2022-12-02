@@ -16,6 +16,3 @@ inoremap <silent><expr> <TAB>
 
   let g:coc_snippet_next = '<tab>'
 
-noremap <Leader>en :call CocAction('diagnosticNext')<CR>
-noremap <Leader>ep :call CocAction('diagnosticPrevious')<CR>
-

@@ -77,6 +77,9 @@ noremap <Leader>fw :Windows<CR>
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fr :Rg<CR>
 
+noremap <Leader>en :call CocAction('diagnosticNext')<CR>
+noremap <Leader>ep :call CocAction('diagnosticPrevious')<CR>
+
 map <Leader>j :tabr<CR>
 map <Leader>k :tabl<CR>
 map <Leader>h :tabp<CR>
