@@ -16,11 +16,12 @@ fi
 
 ACTION=$1
 DIR=$(realpath $2)
+EXTRA_ARGS="${@:3}"
 DIRBASE=$(basename $DIR)
 
 if [[ "$ACTION" == "push" ]]; then
-    rsync -ah --info=progress2 $DIR/ $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE
+    rsync -ah --info=progress2 $EXTRA_ARGS $DIR/ $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE
 elif [[ "$ACTION" == "pull" ]]; then
-    rsync -ah --info=progress2 $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE/ $DIR
+    rsync -ah --info=progress2 $EXTRA_ARGS $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE/ $DIR
 fi
 
