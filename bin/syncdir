@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ -z "$SYNCDIR_SERVER" ]; then
+    echo "Environment variable SYNCDIR_SERVER not set"
+    exit 1
+fi
+
+if [ -z "$SYNCDIR_SERVER_DIR" ]; then
+    echo "Environment variable SYNCDIR_SERVER_DIR not set"
+    exit 1
+fi
+
+if [[ $# -lt 2 ]]; then
+    echo "Usage: syncdir [push|pull] <dir>"
+fi
+
+ACTION=$1
+DIR=$(realpath $2)
+DIRBASE=$(basename $DIR)
+
+if [[ "$ACTION" == "push" ]]; then
+    rsync -ah --info=progress2 $DIR/ $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE
+elif [[ "$ACTION" == "pull" ]]; then
+    rsync -ah --info=progress2 $USER@$SYNCDIR_SERVER:$SYNCDIR_SERVER_DIR/$DIRBASE/ $DIR
+fi
+
