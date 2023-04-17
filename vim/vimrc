@@ -64,6 +64,8 @@ call plug#end()
 " -------------------------------------------------------------------
 let mapleader = ' '
 
+nnoremap <Leader>pc :call popup_close(win_getid())<CR>
+
 noremap <Leader>qq :q!<CR>
 
 noremap <Leader>gf :e <cfile><CR>
@@ -107,3 +109,7 @@ set t_RV=
 
 map <Leader>nh :nohl<CR>
 
+if exists('$WAYLAND_DISPLAY') && executable('wl-copy') && executable('wl-paste')
+    xnoremap "*y y:call system("wl-copy", @")<cr>
+    nnoremap "*p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+endif
