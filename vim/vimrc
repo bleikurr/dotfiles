@@ -82,6 +82,7 @@ noremap <Leader>fr :Rg<CR>
 noremap <Leader>en :call CocAction('diagnosticNext')<CR>
 noremap <Leader>ep :call CocAction('diagnosticPrevious')<CR>
 
+
 map <Leader>j :tabr<CR>
 map <Leader>k :tabl<CR>
 map <Leader>h :tabp<CR>
@@ -93,6 +94,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+nnoremap <Leader>cp :call popup_close(win_getid())<CR>
+
 map <C-w>v :vnew<CR>
 map <C-w>s :new<CR>
 
@@ -103,6 +106,10 @@ let g:floaterm_keymap_toggle = '<Leader>tt'
 
 if filereadable(expand("~/.vim/local.vim"))
     source ~/.vim/local.vim
+endif
+
+if filereadable("./.vimrc.local")
+    source ./.vimrc.local
 endif
 
 set t_RV=
