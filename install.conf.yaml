@@ -27,7 +27,5 @@
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/bin/waitforit: bin/waitforit
-    ~/bin/switchwindow: bin/switchwindow
-    ~/bin/syncdir: bin/syncdir
 
 
