@@ -142,3 +142,7 @@ if [ -f ~/.cargo/env ]; then
     . "$HOME/.cargo/env"
 fi
 
+export PS1='%{%(?.$fg_bold[green].$fg_bold[red])%}➜ %{$fg_bold[green]%} %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
+PATH="/home/frosti/perl5/bin${PATH:+:${PATH}}"; export PATH;
+
