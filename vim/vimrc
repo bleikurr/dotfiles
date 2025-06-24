@@ -68,9 +68,14 @@ let mapleader = ' '
 
 nnoremap <Leader>cp :call popup_close(win_getid())<CR>
 
-map <Leader>y "+y
-map <Leader>p "+p
-map <Leader>P "+P
+if $XDG_SESSION_TYPE == "wayland"
+  map <Leader>y :w !wl-copy<CR>
+  map <Leader>p :r !wl-paste<CR>
+else
+  map <Leader>y "+y
+  map <Leader>p "+p
+  map <Leader>P "+P
+endif
 
 noremap <Leader>qq :q!<CR>
 
@@ -113,13 +118,9 @@ if filereadable(expand("~/.vim/local.vim"))
     source ~/.vim/local.vim
 endif
 
-if filereadable("./.vimrc.local")
-    source ./.vimrc.local
-endif
 
 set t_RV=
 
 map <Leader>nh :nohl<CR>
-
 
 
