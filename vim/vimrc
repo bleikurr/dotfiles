@@ -118,9 +118,11 @@ if filereadable(expand("~/.vim/local.vim"))
     source ~/.vim/local.vim
 endif
 
+if filereadable("./.vimrc.local")
+    source ./.vimrc.local
+endif
 
 set t_RV=
 
 map <Leader>nh :nohl<CR>
-
 
