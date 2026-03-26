@@ -27,5 +27,6 @@
     ~/.fonts: fonts
     ~/.zshrc: zsh/zshrc
     ~/bin/waitforit: bin/waitforit
+    ~/.tmux.conf: configs/tmux.conf
 
 
