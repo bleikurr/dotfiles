@@ -38,8 +38,10 @@ function _l() {
 
 mkdir -p ~/.local/var/log
 
-_l nvim             ~/.config/nvim 
+_l backgrounds      ~/.local/share/backgrounds
 _l vim-asksudo.sh   ~/.local/bin/vim
+_l nvim             ~/.config/nvim 
 _l sway             ~/.config/sway
 _l dunstrc          ~/.config/dunst/dunstrc
-_l backgrounds      ~/.local/share/backgrounds
+_l waybar           ~/.config/waybar
+_l swaylock         ~/.config/swaylock
