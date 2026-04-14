@@ -45,3 +45,4 @@ _l sway             ~/.config/sway
 _l dunstrc          ~/.config/dunst/dunstrc
 _l waybar           ~/.config/waybar
 _l swaylock         ~/.config/swaylock
+_l wofi             ~/.config/wofi
