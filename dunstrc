@@ -1,0 +1,44 @@
+[global]
+    font = JetBrains Mono 10
+    monitor = 1
+    background = "#282828"
+    foreground = "#ebdbb2"
+    frame_color = "#504945"
+    frame_width = 2
+    corner_radius = 6
+    padding = 10
+    horizontal_padding = 12
+    separator_height = 2
+    separator_color = "#504945"
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+    origin = top-right
+    offset = 12x48
+    width = 320
+    gap_size = 6
+    dmenu = /usr/bin/wofi --dmenu    # or dmenu, wofi, etc.
+    mouse_left_click  = do_action   # invoke default action
+    mouse_middle_click = context    # show action menu
+    mouse_right_click = close
+
+[urgency_low]
+    background = "#282828"
+    foreground = "#a89984"
+    frame_color = "#504945"
+    timeout = 5
+
+[urgency_normal]
+    background = "#282828"
+    foreground = "#ebdbb2"
+    frame_color = "#d79921"
+    timeout = 10
+
+[urgency_critical]
+    background = "#3c3836"
+    foreground = "#fb4934"
+    frame_color = "#cc241d"
+    timeout = 0

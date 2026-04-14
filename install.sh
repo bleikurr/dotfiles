@@ -26,7 +26,7 @@ function _l() {
     fi
 
     linkdir=$(dirname "$link")
-    mkdir -vp "$linkdir" # Create directories if don't exist
+    mkdir -p "$linkdir" # Create directories if don't exist
 
     ln_output=$(ln -svf "$target" "$link" &> /dev/null)
     if [[ $? -eq 0 ]]; then
@@ -36,7 +36,10 @@ function _l() {
     fi
 }
 
+mkdir -p ~/.local/var/log
 
-_l nvim ~/.config/nvim 
-_l vim-asksudo.sh ~/bin/vim
-
+_l nvim             ~/.config/nvim 
+_l vim-asksudo.sh   ~/.local/bin/vim
+_l sway             ~/.config/sway
+_l dunstrc          ~/.config/dunst/dunstrc
+_l backgrounds      ~/.local/share/backgrounds
