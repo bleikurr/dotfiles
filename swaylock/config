@@ -1,4 +1,4 @@
-image=~/.local/share/backgrounds/gruvbox-rainbow.png
+image=~/.local/share/backgrounds/bleikur-gruvbox-rainbow.png
 scaling=fill
 ignore-empty-password
 daemonize
@@ -13,7 +13,6 @@ caps-lock-bs-hl-color=7daea3cc
 caps-lock-key-hl-color=d3869bcc
 font=JetBrainsMono Nerd Font Bold
 font-size=35
-indicator-idle-visible
 indicator-radius=100
 indicator-thickness=7
 inside-color=32302f66

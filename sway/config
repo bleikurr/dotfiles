@@ -18,7 +18,7 @@ gaps inner 5
 font pongo:JetBrainsMono Nerd Font 10
 
 #output * bg /usr/share/backgrounds/bleikivikingurinn/bvbackground.png fill
-output * bg ~/.local/share/backgrounds/gruvbox-rainbow.png fill
+output * bg ~/.local/share/backgrounds/bleikur-gruvbox-rainbow.png fill
 #
 # Example configuration:
 #
@@ -30,7 +30,7 @@ output HDMI-A-1 {
 	transform 270
 	position 0 0
 	resolution 1920x1080
-	bg ~/.local/share/backgrounds/gruvbox-rainbow.png fit #282828
+	bg ~/.local/share/backgrounds/bleikur-gruvbox-rainbow.png fit #282828
 }
 
 output HDMI-A-1 {
