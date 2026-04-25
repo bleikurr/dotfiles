@@ -183,7 +183,11 @@
     color: @bg;
     background: @bluetint;
 }
-
+#custom-arrow11 {
+    font-size: 2em;
+    color: @bluetint;
+    background: @bg;
+}
 /* And now modules themselves in their respective order */
 #clock.time {
     background: @bg;
