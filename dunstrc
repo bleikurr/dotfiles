@@ -1,6 +1,6 @@
 [global]
     font = JetBrains Mono 10
-    monitor = 1
+    monitor = 0
     background = "#282828"
     foreground = "#ebdbb2"
     frame_color = "#504945"

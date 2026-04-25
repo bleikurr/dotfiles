@@ -5,6 +5,7 @@ vim.lsp.config("*", {
 require("lsp.rust")
 require("lsp.go")
 require("lsp.lua")
+require("lsp.clang")
 
 
 vim.api.nvim_create_autocmd('LspAttach', {

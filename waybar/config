@@ -25,10 +25,10 @@
         "sway/workspaces": {
             "disable-scroll": true,
             "all-outputs": false,
-            "format": "{icon}{name}{icon}",
+            "format": "{icon}{name}",
             "format-icons": {
-                "urgent": "!",
-                "focused": "-",
+                "urgent": " ",
+                "focused": "󰈈 ",
                 "default": " "
             }
         },
@@ -210,10 +210,10 @@
         "sway/workspaces": {
             "disable-scroll": true,
             "all-outputs": false,
-            "format": "{icon}{name}{icon}",
+            "format": "{icon}{name}",
             "format-icons": {
-                "urgent": "",
-                "focused": "-",
+                "urgent": " ",
+                "focused": "󰈈 ",
                 "default": " "
             }
         },

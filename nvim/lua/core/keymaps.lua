@@ -17,5 +17,5 @@ local function nvimtree_config()
 end
 nvimtree_config()
 
-vim.keymap.set("n", "<Leader>'", ":lua vim.lsp.buf.hover()<CR>")
+vim.keymap.set("n", "<Leader>'", ":lua vim.diagnostic.open_float()<CR>")
 
